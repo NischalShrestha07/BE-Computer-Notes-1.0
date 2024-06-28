@@ -1,0 +1,5 @@
+// Git Bash Initial Commands for starting to push code in girhub
+
+git config --global user.email "user@gmail.com"
+git config --global user.name "Your Name"
+
