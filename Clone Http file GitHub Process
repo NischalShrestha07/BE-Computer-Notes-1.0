@@ -1,0 +1,5 @@
+1. Go to GitBash from Powershell option.
+2. Write ls -la
+now we have to remove .git which is of owner of file
+3. rm -rf .git
+4. then paste the link copied from the github which you want ro clone
