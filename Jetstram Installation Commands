@@ -1,0 +1,8 @@
+composer require laravel/jetstream
+
+php artisan jetstream:install liveware
+
+npm install
+
+npm run dev
+
