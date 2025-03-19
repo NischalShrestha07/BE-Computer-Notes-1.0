@@ -1,0 +1,3 @@
+git checkout origin/main -- app/Http/Controllers/API/AuthController.php
+>> 
+PS C:\xampp\htdocs\rathicol-api> git pull origin main
