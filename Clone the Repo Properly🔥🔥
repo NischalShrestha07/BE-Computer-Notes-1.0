@@ -8,3 +8,14 @@ php artisan key:generate
 php artisan storage:link
 
 php artisan migrate:fresh --seed
+
+
+
+
+
+
+
+
+///for live preview of project onlineof github 
+Note: github1s.com
+https://github1s.com/NischalShrestha07/Book-Review-App
