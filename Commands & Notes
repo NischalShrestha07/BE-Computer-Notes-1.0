@@ -1,0 +1,1 @@
+Deletes everything inside project-> Hit this in terminal ---->  Remove-Item * -Recurse -Force
