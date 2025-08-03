@@ -1,0 +1,62 @@
+clean_content = """
+FIX: MySQL Not Starting in XAMPP
+
+This guide helps you reinitialize your MySQL data folder and restore your databases.
+
+PART 1: BACKUP
+
+1. Stop MySQL from XAMPP:
+   - Open XAMPP Control Panel
+   - Click "Stop" on MySQL
+
+2. Backup Current Data:
+   - Go to: C:\\xampp\\mysql\\
+   - Copy the "data" folder and save it somewhere safe as "data-backup"
+
+PART 2: REINITIALIZE MYSQL
+
+1. Delete the current "data" folder from: C:\\xampp\\mysql\\
+
+2. Copy default data:
+   - Go to: C:\\xampp\\mysql\\backup
+   - Copy all contents, paste into: C:\\xampp\\mysql\\
+   - Rename it as "data"
+
+3. Start MySQL:
+   - Open XAMPP as Administrator
+   - Click "Start" on MySQL
+
+PART 3: RESTORE OLD DATABASES
+
+1. From your "data-backup", copy only your project folders (e.g., gym_system, student_mgmt)
+   - DO NOT copy mysql/, phpmyadmin/, performance_schema/, information_schema/
+
+2. Paste copied folders into: C:\\xampp\\mysql\\data
+
+3. (If using InnoDB):
+   - Copy ibdata1 file from data-backup to the new data folder
+
+4. Set folder permissions:
+   - Right-click on data folder > Properties > Security > Grant Full Control
+
+PART 4: FINAL CHECK
+
+1. Restart MySQL in XAMPP
+2. Go to http://localhost/phpmyadmin
+3. Check if your databases are visible and working
+
+TROUBLESHOOTING:
+
+- MySQL not starting: Check mysql_error.log in C:\\xampp\\mysql\\data
+- Unknown table engine 'InnoDB': ibdata1 is missing or corrupted
+- Tables not found: Missing .frm or .ibd files
+- Can't open tables: Incomplete InnoDB backup
+
+SUMMARY:
+
+1. Backup your MySQL data folder
+2. Replace with clean data folder from backup/
+3. Start MySQL cleanly
+4. Restore only project database folders
+5. Restart MySQL and check in phpMyAdmin
+"""
